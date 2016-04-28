@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>Список учащихся группы</title>
+	<form>
+	<input type = "table-cell"  name = "group" value = "Группа № {{ record.number }}, {{ record.course }} курс, {{ record.level }}" disabled class="input">
+	</form>
+
+	<style>
+.input {
+    width: 100%;
+    height: 70px;
+  border: 1px solid #BBB;
+  border-top-color: #DDD;
+  border-left-color: #DDD;
+  background: #AB47CC;
+  color: #E0D5E3;
+  font: 20px Arial, Tahoma, sans-serif;
+  text-align:center;
+}
+.my_button {
+    width: 300px;
+    height: 30px;
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   ul {
+    display: table; margin: 0 auto;
+   }
+.cen{
+align="center";
+}
+
+</style>
+  </head>
+
+  <body>
+ <form>
+    <ul>
+     {% for st in students %}
+	<li align="center">
+	<a href='/ammapp/profile/{{ st.pk }}/'>
+	<input type = "button"  name = "group" value = "{{st.name}}" class="my_button">
+	 </a>
+	</li>
+     {% endfor %}
+    </ul>
+</form>
+
+
+
+
+
+
+
+  </body>
+</html>

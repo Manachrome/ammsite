@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<meta charset="utf-8">
+<title>Список групп факультета</title>
+  <form>
+<input type = "table-cell"  name = "group" value = "Список групп факультета" disabled class="input">
+  </form>
+
+<style>
+.input {
+    width: 100%;
+    height: 70px;
+  border: 1px solid #BBB;
+  border-top-color: #DDD;
+  border-left-color: #DDD;
+  background: #AB47CC;
+  color: #E0D5E3;
+  font: 20px Arial, Tahoma, sans-serif;
+  text-align:center;
+}
+.my_button {
+    width: 300px;
+    height: 30px;
+}
+li {
+    list-style-type: none;
+   }
+   ul {
+    display: table; margin: 0 auto;
+   }
+.cen{
+align="center";
+}
+
+</style>
+  </head>
+
+<body>
+<form>
+    <ul>
+     {% for record in records %} <!цикл вывода данных>
+	<li align="center">
+	<a href='/ammapp/group_detail/{{ record.pk }}/'>  <!ссылка для роутинга>
+  <!Вывод данных в {{}}>
+	<input type = "button"  name = "group" value = "Группа № {{ record.number }} , {{ record.course }} курс {{ record.level }}" class="my_button">
+	 </a>
+	</li>
+     {% endfor %}
+    </ul>
+</form>
+  </body>
+</html>

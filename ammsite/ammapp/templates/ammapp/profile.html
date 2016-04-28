@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Информация о студенте</title>
+   <form>
+	<input type = "table-cell"  name = "group" value = "Информация о студенте" disabled class="input">
+	</form>
+   <style>
+.input {
+  width: 100%;
+  height: 70px;
+  background: #AB47CC;
+  color: #E0D5E3;
+  font: 20px Arial, Tahoma, sans-serif;
+  text-align:center;
+}
+.my_button {
+    width: 300px;
+    height: 30px;
+	text-align:center;
+}
+li {
+    list-style-type: none; 
+   }
+   ul {
+    display: table; margin: 0 auto;
+   }
+.cen{
+align="center";
+    }
+td{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<br>
+<table align="left" width=500px height = 80px>
+  <tr>
+    <th>Информация о студенте</th>
+  </tr>
+   <tr>
+    <td>Ф.И.О. студента</td>
+    <td>{{record.name}}</td>
+   </tr>
+   <tr>
+    <td>Дата рождения</td>
+    <td>{{record.b_date}}</td>
+  </tr>
+ </table>
+ <table align="left" width=500px height = 80px>
+    <th>Место учебы</th>
+    <tr>
+      <td>Направление</td>
+      <td>{{record.group.direction}}</td>
+    </tr>
+
+    <tr>
+     <td>Номер группы</td>
+     <td>{{record.group.number}}</td>
+    </tr>
+
+    </tr>
+    <tr>
+     <td>Курс</td>
+     <td>{{record.group.course}}</td>
+    </tr>
+
+    </tr>
+    <tr>
+     <td>Уровень образования</td>
+     <td>{{record.group.level}}</td>
+    </tr>
+
+  </table>
+
+
+  </body>
+</html>
